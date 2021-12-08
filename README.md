@@ -1,4 +1,4 @@
-## Example Summary
+## Example Summary...
 
 This example is intended to be a starting point for new development where
 a fuller set of kernel features and debug capabilities are enabled.
