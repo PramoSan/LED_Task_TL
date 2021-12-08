@@ -48,30 +48,17 @@
 
 /* Driver configuration */
 #include "ti_drivers_config.h"
+#include <stdio.h>
 
 /*
  *  ======== mainThread ========
  */
 void *mainThread(void *arg0)
 {
-    /* 1 second delay */
-    uint32_t time = 1;
+    int a;
 
-    /* Call driver init functions */
-    GPIO_init();
-    // I2C_init();
-    // SPI_init();
-    // UART_init();
-    // Watchdog_init();
-
-    /* Configure the LED pin */
-    GPIO_setConfig(CONFIG_GPIO_LED_0, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
-
-    /* Turn on user LED */
-    GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
-
-    while (1) {
-        sleep(time);
-        GPIO_toggle(CONFIG_GPIO_LED_0);
-    }
+               /* for loop execution */
+               for( a = 1; a <= 20; a = a + 1 ){
+                  printf("value of a: %d\n", a);
+               }
 }
