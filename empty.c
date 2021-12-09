@@ -1,5 +1,5 @@
 /*
- *  ======== Blink Toggle ========
+ *  ======== Blink with Console Print ========
  */
 
 /* For usleep() */
@@ -43,10 +43,22 @@ void *mainThread(void *arg0)
     while (1) {
 
         GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
+        printf("LED ON \n");
         sleep(1);
 
         GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_OFF);
+        printf("LED OFF \n");
         sleep(1);
+
+        /*
+              printf("1-GPIO_write: %d\n", GPIO_write);
+              printf("2-GPIO_toggle: %d\n", GPIO_toggle);
+              printf("3-CONFIG_GPIO_LED_0: %d\n", CONFIG_GPIO_LED_0);
+              printf("4-GPIO_CFG_OUT_STD: %d\n", GPIO_CFG_OUT_STD);
+              printf("5-GPIO_CFG_OUT_LOW: %d\n", GPIO_CFG_OUT_LOW);
+              printf("6-CONFIG_GPIO_LED_ON: %d\n", CONFIG_GPIO_LED_ON);
+        */
+
 
            }
 }
