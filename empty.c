@@ -1,5 +1,5 @@
 /*
- *  ======== Blink with Console Print ========
+ *  ======== PWM LED ========
  */
 
 /* For usleep() */
@@ -17,47 +17,48 @@
 /* Driver configuration */
 #include "ti_drivers_config.h"
 #include <stdio.h>
+#include <ti/drivers/PWM.h>
+
 
 /*
  *  ======== mainThread ========
  */
-
+uint16_t   duty;
 void *mainThread(void *arg0)
 {
-    /* 1 second delay */
-   // uint32_t time = 2;
+        uint16_t   pwmPeriod = 5000;
+        uint16_t   duty = 0;
+        uint16_t   dutyInc = 100;
+        uint32_t   time = 10000;
+        PWM_Handle pwm1 = NULL;
+        PWM_Params params;
+        PWM_init();
+        PWM_Params_init(&params);
+            params.dutyUnits = PWM_DUTY_US;
+            params.dutyValue = 0;
+            params.periodUnits = PWM_PERIOD_US;
+            params.periodValue = pwmPeriod;
+            pwm1 = PWM_open(CONFIG_PWM_0, &params);
+            if (pwm1 == NULL) {
+                /* CONFIG_PWM_0 did not open */
+                while (1);
+            }
+            PWM_start(pwm1);
 
-    /* Call driver init functions */
-    GPIO_init();
-    // I2C_init();
-    // SPI_init();
-    // UART_init();
-    // Watchdog_init();
-
-    /* Configure the LED pin */
-    GPIO_setConfig(CONFIG_GPIO_LED_0, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
-
-    /* Turn on user LED */
-    GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
 
     while (1) {
 
-        GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
-        printf("LED ON \n");
-        sleep(1);
+        PWM_setDuty(pwm1, duty);
 
-        GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_OFF);
-        printf("LED OFF \n");
-        sleep(1);
+                duty = (duty + dutyInc);
 
-        /*
-              printf("1-GPIO_write: %d\n", GPIO_write);
-              printf("2-GPIO_toggle: %d\n", GPIO_toggle);
-              printf("3-CONFIG_GPIO_LED_0: %d\n", CONFIG_GPIO_LED_0);
-              printf("4-GPIO_CFG_OUT_STD: %d\n", GPIO_CFG_OUT_STD);
-              printf("5-GPIO_CFG_OUT_LOW: %d\n", GPIO_CFG_OUT_LOW);
-              printf("6-CONFIG_GPIO_LED_ON: %d\n", CONFIG_GPIO_LED_ON);
-        */
+                if (duty == pwmPeriod || (!duty)) {
+                    dutyInc = - dutyInc;
+                }
+
+                usleep(time);
+
+                    printf("duty %d\n",duty);
 
 
            }

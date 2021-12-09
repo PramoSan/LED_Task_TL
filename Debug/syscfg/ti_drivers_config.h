@@ -42,7 +42,11 @@ extern "C" {
  *  ======== GPIO ========
  */
 extern const uint_least8_t CONFIG_GPIO_LED_0_CONST;
-#define CONFIG_GPIO_LED_0 6
+#define CONFIG_GPIO_LED_0 7
+
+/* Owned by CONFIG_GPTIMER_0 as  */
+extern const uint_least8_t CONFIG_GPIO_PWM_0_CONST;
+#define CONFIG_GPIO_PWM_0 6
 
 /* The range of pins available on this device */
 extern const uint_least8_t GPIO_pinLowerBound;
@@ -54,6 +58,25 @@ extern const uint_least8_t GPIO_pinUpperBound;
 
 #define CONFIG_LED_ON  (CONFIG_GPIO_LED_ON)
 #define CONFIG_LED_OFF (CONFIG_GPIO_LED_OFF)
+
+
+/*
+ *  ======== PWM ========
+ */
+
+/* DIO6, LaunchPad LED Red */
+extern const uint_least8_t              CONFIG_PWM_0_CONST;
+#define CONFIG_PWM_0                    0
+#define CONFIG_TI_DRIVERS_PWM_COUNT     1
+
+
+/*
+ *  ======== GPTimer ========
+ */
+
+extern const uint_least8_t                  CONFIG_GPTIMER_0_CONST;
+#define CONFIG_GPTIMER_0                    0
+#define CONFIG_TI_DRIVERS_GPTIMER_COUNT     1
 
 
 /*

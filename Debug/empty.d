@@ -33,6 +33,7 @@ empty.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/de
 empty.obj: syscfg/ti_drivers_config.h
 empty.obj: /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h
 empty.obj: /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdarg.h
+empty.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/PWM.h
 
 ../empty.c:
 
@@ -99,4 +100,6 @@ syscfg/ti_drivers_config.h:
 /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h:
 
 /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdarg.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/PWM.h:
 
