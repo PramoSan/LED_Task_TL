@@ -41,12 +41,19 @@ extern "C" {
 /*
  *  ======== GPIO ========
  */
-extern const uint_least8_t CONFIG_GPIO_LED_0_CONST;
-#define CONFIG_GPIO_LED_0 7
+extern const uint_least8_t CONFIG_GPIO_BUTTON_0_CONST;
+#define CONFIG_GPIO_BUTTON_0 14
+
+extern const uint_least8_t CONFIG_GPIO_BUTTON_1_CONST;
+#define CONFIG_GPIO_BUTTON_1 15
 
 /* Owned by CONFIG_GPTIMER_0 as  */
 extern const uint_least8_t CONFIG_GPIO_PWM_0_CONST;
 #define CONFIG_GPIO_PWM_0 6
+
+/* Owned by CONFIG_LED_0 as  */
+extern const uint_least8_t CONFIG_GPIO_LED_0_CONST;
+#define CONFIG_GPIO_LED_0 7
 
 /* The range of pins available on this device */
 extern const uint_least8_t GPIO_pinLowerBound;
@@ -68,6 +75,15 @@ extern const uint_least8_t GPIO_pinUpperBound;
 extern const uint_least8_t              CONFIG_PWM_0_CONST;
 #define CONFIG_PWM_0                    0
 #define CONFIG_TI_DRIVERS_PWM_COUNT     1
+
+
+/*
+ *  ======== LED ========
+ */
+
+extern const uint_least8_t              CONFIG_LED_0_CONST;
+#define CONFIG_LED_0                    0
+#define CONFIG_TI_DRIVERS_LED_COUNT     1
 
 
 /*

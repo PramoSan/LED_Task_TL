@@ -14,38 +14,42 @@ syscfg/ti_drivers_config.obj: /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/DeviceFamily.h
 syscfg/ti_drivers_config.obj: syscfg/ti_drivers_config.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/dma/UDMACC26XX.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Power.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/utils/List.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/power/PowerCC26XX.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/dpl/HwiP.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/dpl/ClockP.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_types.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_chip_def.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/udma.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_ints.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_memmap.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_udma.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/debug.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/interrupt.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_nvic.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/cpu.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_cpu_scs.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rom.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/GPIO.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/gpio/GPIOCC26XX.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/GPIO.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_ioc.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/PWM.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/pwm/PWMTimerCC26XX.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/timer/GPTimerCC26XX.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/dpl/HwiP.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_gpt.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/event.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_types.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_chip_def.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_memmap.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_event.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/debug.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/ioc.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_ints.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/interrupt.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_nvic.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/cpu.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_cpu_scs.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rom.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/gpio.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_gpio.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/timer.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Power.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/utils/List.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/power/PowerCC26X2.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/dpl/ClockP.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/power/PowerCC26XX.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Temperature.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/apps/LED.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Board.h
 
 syscfg/ti_drivers_config.c:
@@ -76,6 +80,44 @@ syscfg/ti_drivers_config.c:
 
 syscfg/ti_drivers_config.h:
 
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/dma/UDMACC26XX.h:
+
+/home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Power.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/utils/List.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/power/PowerCC26XX.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/dpl/HwiP.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/dpl/ClockP.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_types.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_chip_def.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/udma.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_ints.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_memmap.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_udma.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/debug.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/interrupt.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_nvic.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/cpu.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_cpu_scs.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rom.h:
+
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/GPIO.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/gpio/GPIOCC26XX.h:
@@ -88,39 +130,15 @@ syscfg/ti_drivers_config.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/pwm/PWMTimerCC26XX.h:
 
-/home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h:
-
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/timer/GPTimerCC26XX.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/dpl/HwiP.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_gpt.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/event.h:
 
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_types.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_chip_def.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_memmap.h:
-
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_event.h:
 
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/debug.h:
-
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/ioc.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_ints.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/interrupt.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_nvic.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/cpu.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_cpu_scs.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rom.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/gpio.h:
 
@@ -128,17 +146,11 @@ syscfg/ti_drivers_config.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/timer.h:
 
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Power.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/utils/List.h:
-
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/power/PowerCC26X2.h:
 
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/dpl/ClockP.h:
-
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/power/PowerCC26XX.h:
-
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Temperature.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/apps/LED.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Board.h:
 

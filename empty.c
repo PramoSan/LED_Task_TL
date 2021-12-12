@@ -19,47 +19,72 @@
 #include <stdio.h>
 #include <ti/drivers/PWM.h>
 
+/*
+ *  ======== gpioButtonFxn0 ========
+ *  Callback function for the GPIO interrupt on CONFIG_GPIO_BUTTON_0.
+ *
+ *  Note: GPIO interrupts are cleared prior to invoking callbacks.
+ */
+void gpioButtonFxn0(uint_least8_t index)
+{
+    /* Toggle an LED */
+    GPIO_toggle(CONFIG_GPIO_LED_0);
+    GPIO_setConfig(CONFIG_GPIO_LED_0, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
+
+      printf("Button R Pressed \n");
+
+}
+
+
+void gpioButtonFxn1(uint_least8_t index)
+{
+    /* Toggle an LED */
+    GPIO_toggle(CONFIG_GPIO_LED_0);
+        GPIO_setConfig(CONFIG_GPIO_LED_0, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
+
+         printf("Button L Pressed \n");
+
+}
+
 
 /*
  *  ======== mainThread ========
  */
-uint16_t   duty;
+
 void *mainThread(void *arg0)
 {
-        uint16_t   pwmPeriod = 5000;
-        uint16_t   duty = 0;
-        uint16_t   dutyInc = 100;
-        uint32_t   time = 10000;
-        PWM_Handle pwm1 = NULL;
-        PWM_Params params;
-        PWM_init();
-        PWM_Params_init(&params);
-            params.dutyUnits = PWM_DUTY_US;
-            params.dutyValue = 0;
-            params.periodUnits = PWM_PERIOD_US;
-            params.periodValue = pwmPeriod;
-            pwm1 = PWM_open(CONFIG_PWM_0, &params);
-            if (pwm1 == NULL) {
-                /* CONFIG_PWM_0 did not open */
-                while (1);
-            }
-            PWM_start(pwm1);
+
+        GPIO_init();
 
 
-    while (1) {
-
-        PWM_setDuty(pwm1, duty);
-
-                duty = (duty + dutyInc);
-
-                if (duty == pwmPeriod || (!duty)) {
-                    dutyInc = - dutyInc;
-                }
-
-                usleep(time);
-
-                    printf("duty %d\n",duty);
+        GPIO_setConfig(CONFIG_GPIO_LED_0, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
+        GPIO_setConfig(CONFIG_GPIO_BUTTON_0, GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING);
 
 
-           }
+        GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_OFF);
+
+        /* Install Button callback */
+        GPIO_setCallback(CONFIG_GPIO_BUTTON_0, gpioButtonFxn0);
+
+        /* Enable interrupts */
+        GPIO_enableInt(CONFIG_GPIO_BUTTON_0);
+
+        /*
+         *  If more than one input pin is available for your device, interrupts
+         *  will be enabled on CONFIG_GPIO_BUTTON1.
+         */
+        if (CONFIG_GPIO_BUTTON_0 != CONFIG_GPIO_BUTTON_1) {
+            /* Configure BUTTON1 pin */
+        GPIO_setConfig(CONFIG_GPIO_BUTTON_1, GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING);
+
+            /* Install Button callback */
+            GPIO_setCallback(CONFIG_GPIO_BUTTON_1, gpioButtonFxn1);
+            GPIO_enableInt(CONFIG_GPIO_BUTTON_1);
+
+
+        }
+
+        return (NULL);
+
+
 }

@@ -18,6 +18,30 @@
 #include "ti_drivers_config.h"
 
 /*
+ *  =============================== DMA ===============================
+ */
+
+#include <ti/drivers/dma/UDMACC26XX.h>
+#include <ti/devices/cc13x2_cc26x2/driverlib/udma.h>
+#include <ti/devices/cc13x2_cc26x2/inc/hw_memmap.h>
+
+UDMACC26XX_Object udmaCC26XXObject;
+
+const UDMACC26XX_HWAttrs udmaCC26XXHWAttrs = {
+    .baseAddr        = UDMA0_BASE,
+    .powerMngrId     = PowerCC26XX_PERIPH_UDMA,
+    .intNum          = INT_DMA_ERR,
+    .intPriority     = (~0)
+};
+
+const UDMACC26XX_Config UDMACC26XX_config[1] = {
+    {
+        .object         = &udmaCC26XXObject,
+        .hwAttrs        = &udmaCC26XXHWAttrs,
+    },
+};
+
+/*
  *  =============================== GPIO ===============================
  */
 
@@ -41,6 +65,7 @@ GPIO_PinConfig gpioPinConfigs[31] = {
     GPIO_CFG_NO_DIR, /* DIO_5 */
     /* Owned by CONFIG_GPTIMER_0 as PWM Pin */
     GPIO_CFG_OUTPUT_INTERNAL | GPIO_CFG_OUT_STR_MED | GPIO_CFG_OUT_LOW, /* CONFIG_GPIO_PWM_0 */
+    /* Owned by CONFIG_LED_0 as LED GPIO */
     GPIO_CFG_OUTPUT_INTERNAL | GPIO_CFG_OUT_STR_MED | GPIO_CFG_OUT_LOW, /* CONFIG_GPIO_LED_0 */
     GPIO_CFG_NO_DIR, /* DIO_8 */
     GPIO_CFG_NO_DIR, /* DIO_9 */
@@ -48,8 +73,8 @@ GPIO_PinConfig gpioPinConfigs[31] = {
     GPIO_CFG_NO_DIR, /* DIO_11 */
     GPIO_CFG_NO_DIR, /* DIO_12 */
     GPIO_CFG_NO_DIR, /* DIO_13 */
-    GPIO_CFG_NO_DIR, /* DIO_14 */
-    GPIO_CFG_NO_DIR, /* DIO_15 */
+    GPIO_CFG_INPUT_INTERNAL | GPIO_CFG_IN_INT_NONE | GPIO_CFG_PULL_NONE_INTERNAL, /* CONFIG_GPIO_BUTTON_0 */
+    GPIO_CFG_INPUT_INTERNAL | GPIO_CFG_IN_INT_NONE | GPIO_CFG_PULL_NONE_INTERNAL, /* CONFIG_GPIO_BUTTON_1 */
     GPIO_CFG_NO_DIR, /* DIO_16 */
     GPIO_CFG_NO_DIR, /* DIO_17 */
     GPIO_CFG_NO_DIR, /* DIO_18 */
@@ -82,8 +107,10 @@ GPIO_CallbackFxn gpioCallbackFunctions[31];
  */
 void* gpioUserArgs[31];
 
-const uint_least8_t CONFIG_GPIO_LED_0_CONST = CONFIG_GPIO_LED_0;
+const uint_least8_t CONFIG_GPIO_BUTTON_0_CONST = CONFIG_GPIO_BUTTON_0;
+const uint_least8_t CONFIG_GPIO_BUTTON_1_CONST = CONFIG_GPIO_BUTTON_1;
 const uint_least8_t CONFIG_GPIO_PWM_0_CONST = CONFIG_GPIO_PWM_0;
+const uint_least8_t CONFIG_GPIO_LED_0_CONST = CONFIG_GPIO_LED_0;
 
 /*
  *  ======== GPIO_config ========
@@ -161,6 +188,35 @@ const PowerCC26X2_Config PowerCC26X2_config = {
     .calibrateRCOSC_HF        = true,
     .enableTCXOFxn            = NULL
 };
+
+/*
+ *  =============================== LED ===============================
+ */
+#include <ti/drivers/apps/LED.h>
+
+#define CONFIG_LED_COUNT 1
+LED_Object LEDObjects[CONFIG_LED_COUNT];
+
+static const LED_HWAttrs LEDHWAttrs[CONFIG_LED_COUNT] = {
+    /* CONFIG_LED_0 */
+    /* LaunchPad LED Green */
+    {
+        .type = LED_GPIO_CONTROLLED,
+        .index = CONFIG_GPIO_LED_0,
+    },
+};
+
+const LED_Config LED_config[CONFIG_LED_COUNT] = {
+    /* CONFIG_LED_0 */
+    /* LaunchPad LED Green */
+    {
+        .object = &LEDObjects[CONFIG_LED_0],
+        .hwAttrs = &LEDHWAttrs[CONFIG_LED_0]
+    },
+};
+
+const uint_least8_t CONFIG_LED_0_CONST = CONFIG_LED_0;
+const uint_least8_t LED_count = CONFIG_LED_COUNT;
 
 /*
  *  =============================== GPTimer ===============================
